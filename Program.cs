@@ -12,6 +12,9 @@ while (loop)
     Console.WriteLine("5. Exit");
     string option = Console.ReadLine();
 
+    int dice1 = rnd.Next(1, 7);
+    int dice2 = rnd.Next(1, 7);
+
     if (option == "1")
     {
         int dice1 = rnd.Next(1, 7);
