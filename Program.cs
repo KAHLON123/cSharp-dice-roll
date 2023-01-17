@@ -1,2 +1,57 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿//nullable disable
+Console.Clear();
+
+Random rnd = new Random();
+bool loop = true;
+while (loop)
+{
+    Console.WriteLine("1. Roll die once");
+    Console.WriteLine("2. Roll die 5 times");
+    Console.WriteLine("3. Roll die 'n' times");
+    Console.WriteLine("4. Roll die until snake eyes");
+    Console.WriteLine("5. Exit");
+    string option = Console.ReadLine();
+
+    int dice1 = rnd.Next(1, 7);
+    int dice2 = rnd.Next(1, 7);
+
+    if (option == "1")
+    {
+        Console.Write($"{dice1},");
+        Console.Write($"  {dice2}");
+    }
+    else if (option == "2")
+    {
+        for (int n = 0; n < 5; n++)
+        {
+            Console.Write($"{dice1},");
+            Console.Write($"  {dice2}");
+        }
+    }
+    else if (option == "3")
+    {
+        Console.WriteLine("Choose an integer:");
+        int num = Console.ReadLine();
+
+        for (int n = 0; n < num; n++)
+        {
+            Console.Write($"{dice1},");
+            Console.Write($"  {dice2}");
+        }
+    }
+    else if (option == "4")
+    {
+        bool loop2 = false;
+        while (loop2 == false)
+        {
+            Console.Write($"{dice1},");
+            Console.Write($"  {dice2}");
+        }
+    }
+    else if (option == "5")
+    {
+        Console.Clear();
+        Console.WriteLine("Goodbye!");
+        break;
+    }
+}
