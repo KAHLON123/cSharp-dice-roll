@@ -12,31 +12,34 @@ while (loop)
     Console.WriteLine("5. Exit");
     string option = Console.ReadLine();
 
-    int dice1 = rnd.Next(1, 7);
-    int dice2 = rnd.Next(1, 7);
-
     if (option == "1")
     {
+        int dice1 = rnd.Next(1, 7);
+        int dice2 = rnd.Next(1, 7);
         Console.Write($"{dice1},");
-        Console.Write($"  {dice2}");
+        Console.WriteLine($" {dice2}");
     }
     else if (option == "2")
     {
         for (int n = 0; n < 5; n++)
         {
+            int dice1 = rnd.Next(1, 7);
+            int dice2 = rnd.Next(1, 7);
             Console.Write($"{dice1},");
-            Console.Write($"  {dice2}");
+            Console.WriteLine($" {dice2}");
         }
     }
     else if (option == "3")
     {
-        Console.WriteLine("Choose an integer:");
-        int num = Console.ReadLine();
+        Console.WriteLine("Type an integer:");
+        int num = Convert.ToInt32(Console.ReadLine());
 
         for (int n = 0; n < num; n++)
         {
+            int dice1 = rnd.Next(1, 7);
+            int dice2 = rnd.Next(1, 7);
             Console.Write($"{dice1},");
-            Console.Write($"  {dice2}");
+            Console.WriteLine($" {dice2}");
         }
     }
     else if (option == "4")
@@ -45,7 +48,7 @@ while (loop)
         while (loop2 == false)
         {
             Console.Write($"{dice1},");
-            Console.Write($"  {dice2}");
+            Console.WriteLine($" {dice2}");
         }
     }
     else if (option == "5")
